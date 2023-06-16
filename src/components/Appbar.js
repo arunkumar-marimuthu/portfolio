@@ -55,6 +55,13 @@ export const Appbar = () => {
     }
   }
 
+  const contact =()=>{
+    const element = document.getElementById('contact');
+    if (element) {
+     
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   return (
   
     <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -72,7 +79,7 @@ export const Appbar = () => {
           </Nav>
           <Nav >
             <Nav.Link   onClick={skills}>Skills</Nav.Link>
-            <Nav.Link  >Contact</Nav.Link>
+            <Nav.Link onClick={contact} >Contact</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>

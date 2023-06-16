@@ -1,12 +1,104 @@
 import './App.css';
-import { Grid } from '@mui/material';
+import { Button, Grid, TextField } from '@mui/material';
 import profilepicture from './images/profilepicture.jpeg.jpg';
 import { Appbar } from './components/Appbar';
+import { useState } from 'react';
 
 
+// initialFields
+const initialFieldValues= {
+  fullname: "",
+  mail: '',
+  mobile: '',
+  subject: '',
 
+}
 
 function App() {
+
+  const errorMsg = {
+    fullname: "",
+    mail: "",
+    mobile: "",
+    subject: "",
+    
+  };
+
+  const [values,setValues] = useState(initialFieldValues);
+  const [errors, setErrors] = useState(errorMsg);
+  const [message, setMessage] = useState('');
+
+    // handle Input change
+    const handleInputChange = (e) => {
+      const name = e.target.name;
+      const value = e.target.value;
+      if (name === "mobile") {
+        let fixedMobile = value.slice(0, 10);
+        setValues({ ...values, mobile: fixedMobile });
+      }
+      else {
+        setValues({ ...values, [name]: value });
+      }
+    }
+
+     // Email validation
+  const emailHandler = (e) => {
+
+    const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (validEmail.test(values.mail)) {
+      setErrors({ ...errors, mail: "" })
+    } else if (values.mail !== '' && values.mail !== null) {
+      setErrors({ ...errors, mail: "Only Email format" })
+    }
+  };
+
+  const emailHider = () => {
+    setErrors({ ...errors, mail: "" })
+  }
+
+
+     // validate scheme
+  const validateDetails = () => {
+    const temp = errorMsg;
+    temp.fullname = values.fullname ? '' : 'Fullname is required';
+    temp.mail = values.mail ? '' : 'Mail Id is required';
+    temp.mobile = values.mobile ? '' : 'Mobile is required';
+    temp.subject = values.subject ? '' : 'Subject is required';
+   
+    setErrors({ ...temp });
+    return Object.values(temp).every((x) => x === '');
+  };
+
+  // for username validation
+  const userNameHandler = () => {
+
+    const validUserName = /^[A-Za-z ]+$/;
+
+    if (validUserName.test(values.fullname)) {
+      setErrors({ ...errors, fullname: "" })
+    } else if (values.fullname !== '' && values.fullname !== null) {
+      setErrors({ ...errors, fullname: "Only aphabets" })
+    }
+  };
+
+  const userNameHider = () => {
+    setErrors({ ...errors, fullname: "" })
+  }
+
+  const setMsg = ()=>{
+    setMessage('');
+    setValues(initialFieldValues);
+  }
+  const formSubmit =()=>{
+    if(!validateDetails()){
+      return
+    }
+
+    setMessage('Your Contact is submitted !')
+
+    setTimeout(setMsg,4000);
+   
+  }
   return (
 
     <>
@@ -117,6 +209,80 @@ function App() {
             </div>
           </Grid>
 
+        </Grid>
+
+
+        <h1  style={{ paddingBottom: "40px",paddingLeft:"170px",backgroundColor: "#bfbfbf"  }}>Contact</h1>
+       
+        <Grid lg={12} item container spacing={2} style={{ backgroundColor: "#bfbfbf",paddingBottom:'100px' }}>
+      
+       
+         <form id='contact'>
+         <Grid container spacing={2} sx={{ mt: -1, mb: 1,paddingLeft:"200px" }}>
+          <Grid item xs={12} sm={12} md={6} lg={3}>
+            <TextField
+              variant="outlined"
+              label="Fullname"
+              name="fullname"
+              value={values.fullname}
+              onBlur={userNameHandler}
+              onFocus={userNameHider}
+              onChange={handleInputChange}
+              {...(errors.fullname !== '' && { error: true, helperText: errors.fullname })}
+              required
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={6} lg={3}>
+            <TextField
+              variant="outlined"
+              label="Mail"
+              name="mail"
+              type={"email"}
+              value={values.mail}
+              onBlur={emailHandler}
+              onFocus={emailHider}
+              onChange={handleInputChange}
+              {...(errors.mail !== '' && { error: true, helperText: errors.mail })}
+              required
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={6} lg={3}>
+            <TextField
+              variant="outlined"
+              label="Mobile"
+              name="mobile"
+              type="number"
+              value={values.mobile}
+              onChange={handleInputChange}
+              {...(errors.mobile !== '' && { error: true, helperText: errors.mobile })}
+              required
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={6} lg={3}>
+            <TextField
+              variant="outlined"
+              label="Subject"
+              name="subject"
+              value={values.subject}
+              onChange={handleInputChange}
+              {...(errors.subject !== '' && { error: true, helperText: errors.subject })}
+              required
+            />
+          </Grid>
+          <Grid item xs={3}>
+          <Button variant='success' sx={{backgroundColor:'blue',color:'white'}} onClick={formSubmit}>Submit</Button>
+          </Grid>
+
+          {message?(
+        <h6 style={{ paddingTop: "25px",paddingLeft:"170px",backgroundColor: "#bfbfbf",color:'green'  }}>{message}</h6>
+       ):('')}
+      
+          </Grid>
+         </form>
+       
         </Grid>
       </section>
 
