@@ -212,7 +212,7 @@ function App() {
         </Grid>
 
 
-        <h1  style={{ paddingBottom: "40px",paddingLeft:"170px",backgroundColor: "#bfbfbf"  }}>Contacts</h1>
+        <h1  style={{ paddingBottom: "40px",paddingLeft:"170px",backgroundColor: "#bfbfbf"  }}>Contact</h1>
        
         <Grid lg={12} item container spacing={2} style={{ backgroundColor: "#bfbfbf",paddingBottom:'100px' }}>
       
