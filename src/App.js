@@ -101,12 +101,12 @@ function App() {
   }
   return (
 
-    <>
-
+  
+<div className="wrapper">
       <Appbar />
       <section id="home">
         <Grid lg={12} item container spacing={2} style={{ backgroundColor: "#bfbfbf" }}>
-          <Grid item lg={6} sm={12} xs={12} style={{ padding: "170px" }}>
+          <Grid item lg={6} sm={12} xs={12} style={{ padding: "170px",paddingBottom:"0px" }}>
           <div >
             <h1 style={{ paddingBottom: "4px" }}>Hi, I'm Arunkumar</h1>
             <h3 style={{ paddingBottom: "4px" }}>Frontend Developer</h3>
@@ -120,9 +120,9 @@ function App() {
             <img src={profilepicture} style={{ borderRadius: "50%", margin: "0 auto", display: "block", paddingTop: "90px" }} />
           </Grid>
 
-          <Grid item lg={12} sm={12} xs={12} style={{paddingTop:"40px"}} >
+          <Grid item lg={12} sm={12} xs={12} style={{paddingTop:"50px"}} >
           <div id="about">
-            <h1 style={{ paddingBottom: "10px",paddingLeft:"170px" }}>About</h1>
+            <h1 style={{ paddingBottom: "10px",paddingLeft:"170px",paddingTop:"30px" }}>About</h1>
             <h5 style={{paddingLeft:"170px",paddingRight:"150px"}}>My name is Arunkumar from Pudukkottai,
               I did my graduation in 2020 from the domain of B.Tech Informnation Technology in
               Mookambigai college of engineering.I have totally Two years experience in Professional career and i worked with different job nature.
@@ -288,7 +288,7 @@ function App() {
 
 
 
-    </>
+      </div>
   );
 }
 
