@@ -115,7 +115,7 @@ function App() {
       <section id="home">
         <div className='container mt-20  md:pt-0 max-w-screen-lg md:mb-10'>
           <div className="flex flex-wrap items-center">
-            <div className="md:w-1/2 md:pl-10">
+            <div className="order-last md:order-first md:w-1/2 md:pl-10">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-black mt-3">Hi, I'm Arunkumar</h1>
               <h3 className="text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-semibold ">MERN Stack Developer</h3>
               <h5 className='mt-2 text-l md:text-xl lg:text-2xl' >I am a MERN stack developer with one year of experience in web development. I have worked on a range of projects for clients in the financial and home interior design industries. I am passionate about creating exceptional user experiences and have a strong understanding of usability and accessibility standards.</h5>
@@ -136,7 +136,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div className="order-first md:order-last md:w-1/2">
               <img src={profilepicture} alt="Your Image" className="mx-auto  w-90 h-130" />
             </div>
           </div>
