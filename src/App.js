@@ -1,11 +1,16 @@
 import './App.css';
 import { Button, Grid, Stack, TextField, Tooltip } from '@mui/material';
-import profilepicture from './images/profilepicture.jpeg.jpg';
-import { Appbar } from './components/Appbar';
+import profilepicture from './images/profilepicture.jpg';
+import AppbarMui from './components/AppbarMui';
 import { useState } from 'react';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import MailIcon from '@mui/icons-material/Mail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CarouselSlide from './components/CarouselSlide';
+import Cards from './components/Cards';
+// import Pagination from './components/Pagination';
+
+
 
 
 // initialFields
@@ -103,139 +108,129 @@ function App() {
 
   }
   return (
+    <>
 
+      <AppbarMui />
 
-    <div className="wrapper">
-      <Appbar />
       <section id="home">
-        <Grid lg={12} item container spacing={2} style={{ backgroundColor: "#bfbfbf" }}>
-          <Grid item lg={6} sm={12} xs={12} style={{ padding: "170px", paddingBottom: "0px" }}>
-            <div >
-              <h1 style={{ paddingBottom: "4px" }}>Hi, I'm Arunkumar</h1>
-              <h3 style={{ paddingBottom: "4px" }}>Frontend Developer</h3>
-              <h5>I'm a front end developer with one year of experience in web development.
-                I've worked on a variety of projects for clients in the financial and home interior design.
-                I'm passionate about creating great user experiences and
-                have a strong understanding of usability and accessibility standards.</h5>
+        <div className='container mt-20  md:pt-0 max-w-screen-lg md:mb-10'>
+          <div className="flex flex-wrap items-center">
+            <div className="md:w-1/2 md:pl-10">
+              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-black mt-3">Hi, I'm Arunkumar</h1>
+              <h3 className="text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-semibold ">MERN Stack Developer</h3>
+              <h5 className='mt-2 text-l md:text-xl lg:text-2xl' >I am a MERN stack developer with one year of experience in web development. I have worked on a range of projects for clients in the financial and home interior design industries. I am passionate about creating exceptional user experiences and have a strong understanding of usability and accessibility standards.</h5>
+              <div className='flex flex-start'>
+                <div>
+                  <Stack direction="row" spacing={6} className='mt-3' >
+                    <Tooltip title="+91 9080934590">
+                      <PhoneAndroidIcon fontSize="medium" />
+                    </Tooltip>
+
+                    <Tooltip title="arunkumar021096@gmail.com">
+                      <MailIcon fontSize="medium" />
+                    </Tooltip>
+                    <Tooltip title="https://www.linkedin.com/in/arunkumar-mern-developer/">
+                      <LinkedInIcon fontSize="medium" />
+                    </Tooltip>
+                  </Stack>
+                </div>
+              </div>
             </div>
-
-            <Stack direction="row" spacing={6} sx={{ paddingTop: "20px" }}>
-              <Tooltip title="+91 9080934590">
-                <PhoneAndroidIcon fontSize="medium" />
-              </Tooltip>
-              <Tooltip title="arunkumar021096@gmail.com">
-                <MailIcon fontSize="medium" />
-              </Tooltip>
-              <Tooltip title="https://www.linkedin.com/in/
-arunkumar-m-4295aa15b">
-                <LinkedInIcon fontSize="medium" />
-              </Tooltip>
-            </Stack>
-          </Grid>
-          <Grid item lg={6} sm={12} xs={12}>
-            <img src={profilepicture} style={{ borderRadius: "50%", margin: "0 auto", display: "block", paddingTop: "90px" }} />
-          </Grid>
-
-          <Grid item lg={12} sm={12} xs={12} style={{ paddingTop: "50px" }} >
-            <div id="about">
-              <h1 style={{ paddingBottom: "10px", paddingLeft: "170px", paddingTop: "30px" }}>About</h1>
-              <h5 style={{ paddingLeft: "170px", paddingRight: "150px" }}>My name is Arunkumar from Pudukkottai,
-                I did my graduation in 2020 from the domain of B.Tech Informnation Technology in
-                Mookambigai college of engineering.I have totally Two years experience in Professional career and i worked with different job nature.
-                I have one year experience in client handling and i also have one year experience in Frontend Development.I got lots of experience in last two years.
-                I learned some necessary technologies which is used to develop User interface Responsively and I willing to learn new technologies for developing User Interface. </h5>
+            <div className="md:w-1/2">
+              <img src={profilepicture} alt="Your Image" className="mx-auto  w-90 h-130" />
             </div>
-          </Grid>
+          </div>
+        </div>
+      </section>
 
-          <Grid item lg={12} sm={12} xs={12} style={{ paddingTop: "40px" }}>
-            <div id="experience">
-              <h1 style={{ paddingBottom: "10px", paddingLeft: "170px" }}>Experience</h1>
-              <h3 style={{ paddingBottom: "5px", paddingLeft: "170px", paddingRight: "150px" }}>React Js Developer (One Year)</h3>
-              <h5 style={{ paddingBottom: "15px", paddingLeft: "170px", paddingRight: "150px" }}>I worked with creating a dynamically interactive web pages by using react Js.I have hands on experience with two projects as a Frontend developer.By using React library i developed web pages with optimised code and
-                achieved code reusability with reusable components.
-              </h5>
+      <section id="about">
+        <div className='container md:mt-10'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mt-3">About</h1>
 
-              <h3 style={{ paddingBottom: "5px", paddingLeft: "170px", paddingRight: "150px" }}>Service Advisor (One Year)</h3>
-              <h5 style={{ paddingBottom: "15px", paddingLeft: "170px", paddingRight: "150px" }}>Worked as a Service Advisor, In this role my responsibilities are handling clients, gathering requirements, Monitoring the service and delivery on time. Handling massive data and manipulating the data with excel reports.</h5>
-            </div>
-          </Grid>
+            <h5 className='mt-2 text-l md:text-xl lg:text-xl' >Hello, my name is Arunkumar from Pudukkottai. I graduated in 2020 with a B.Tech in Information Technology from Mookambigai College of Engineering. I have a total of two years of professional experience, during which I have worked in different roles. I have one year of experience in client handling and one year of experience in web development. I have gained a lot of experience in the last two years, including learning necessary technologies for developing web applications responsively. I am also eager to continue learning new technologies for web application development.</h5>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <div className='container'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl font-black sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3">Experience</h1>
 
+            <h3 className="text-l mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl font-semibold ">MERN Stack Developer</h3>
+            <h5 className='mt-2 text-l md:text-xl lg:text-xl' >Experienced MERN developer with one year of hands-on expertise in building dynamic and responsive web applications. Proficient in frontend and backend development, with a strong focus on delivering high-quality, optimized code.Additionally, I have utilized Next.js to develop web pages with optimized code, achieving code reusability through reusable components. Demonstrated ability to work effectively in collaborative teams and contribute to the success of projects.</h5>
 
+            <h3 className="text-l font-semibold mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl ">Service Advisor</h3>
 
+            <h5 className='mt-2 text-l md:text-xl lg:text-xl' >In my role as a Service Advisor, my responsibilities included handling clients, gathering their requirements, monitoring service progress, and ensuring timely delivery. I also had to manage and manipulate large volumes of data using Excel to generate reports.</h5>
 
-          <Grid item lg={12} sm={12} xs={12} style={{ paddingTop: "40px" }}>
-            <div id="projects">
-              <h1 style={{ paddingBottom: "10px", paddingLeft: "170px" }}>Projects</h1>
-              <h3 style={{ paddingBottom: "5px", paddingLeft: "170px", paddingRight: "150px" }}>Job Planner</h3>
+          </div>
+        </div>
+      </section>
 
-              <ul style={{ paddingBottom: "15px", paddingLeft: "200px", paddingRight: "150px" }}>
-                <li>Worked as a UI Developer to this web application for maintaining records about interior designing of home renovations.</li>
-                <li>Worked with React Js,React Redux and React MUI for developing Job Planner.</li>
-              </ul>
-              <h3 style={{ paddingBottom: "5px", paddingLeft: "170px", paddingRight: "150px" }}>Chitfund</h3>
+      <section id="projects">
+        <div className='container'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3">Projects</h1>
+            <h3 className="text-l font-semibold mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl">Job Planner</h3>
 
-              <ul style={{ paddingBottom: "15px", paddingLeft: "200px", paddingRight: "150px" }}>
-                <li>Worked as a UI Developer to this web application for maintaining records of chit schemes.</li>
-                <li>Worked with React Js ,React Redux, React MUI, Typescript and React Bootstrap for developing Chifund.</li>
-              </ul>
-            </div>
-          </Grid>
-
-          <Grid item lg={12} sm={12} xs={12} style={{ paddingTop: "40px" }} >
-            <div id="qualification">
-              <h1 style={{ paddingBottom: "10px", paddingLeft: "170px" }}>Qualification</h1>
-              <h3 style={{ paddingBottom: "5px", paddingLeft: "170px", paddingRight: "150px" }}>B.Tech Information Technology (2016 - 2020)</h3>
-              <ul style={{ paddingBottom: "15px", paddingLeft: "200px", paddingRight: "150px" }}>
-                <li>
-                  Completed degree with CGPA : 7.9
-                </li>
-                <li>
-                  Mookambigai college of engineering,kalamavur.
-                </li>
-              </ul>
-            </div>
-          </Grid>
-
-          <Grid item lg={12} sm={12} xs={12} style={{ paddingTop: "40px" }}>
-            <div id="skills">
-              <h1 style={{ paddingBottom: "10px", paddingLeft: "170px" }}>Skills</h1>
-              <ul style={{ paddingBottom: "15px", paddingLeft: "200px", paddingRight: "150px" }}>
-                <li>
-                  React js
-                </li>
-                <li>
-                  React Redux
-                </li>
-                <li>
-                  Typescript
-                </li>
-                <li>
-                  HTML
-                </li>
-                <li>
-                  CSS
-                </li>
-                <li>
-                  Javascript
-                </li>
-                <li>
-                  Bootstrap
-                </li>
-              </ul>
-            </div>
-          </Grid>
-
-        </Grid>
+            <ul className='mt-2 ml-10 text-l md:text-xl lg:text-2xl list-disc'>
 
 
-        <h1 style={{ paddingBottom: "40px", paddingLeft: "170px", backgroundColor: "#bfbfbf" }}>Contact</h1>
+              <li className='mt-2 text-l md:text-xl lg:text-xl ' >I worked as a Web Developer on a web application designed to maintain records related to interior home renovations.</li>
 
-        <Grid lg={12} item container spacing={2} style={{ backgroundColor: "#bfbfbf", paddingBottom: '100px' }}>
+              <li className='mt-2 text-l md:text-xl lg:text-xl'>I utilized React Js, React Redux,React MUI,Node js,Express Js and Mongo Db to develop the Job Planner.</li>
+            </ul>
 
 
-          <form id='contact'>
-            <Grid container spacing={2} sx={{ mt: -1, mb: 1, paddingLeft: "200px" }}>
-              <Grid item xs={12} sm={12} md={6} lg={3}>
+            <h3 className="text-l font-semibold  mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl">ChitFund</h3>
+            <ul className='mt-2  ml-10 text-l md:text-xl lg:text-2xl list-disc'>
+              <li className='mt-2 text-l md:text-xl lg:text-xl'>I worked as a Web Developer on a web application designed to maintain records of chit schemes.</li>
+              <li className='mt-2 text-l md:text-xl lg:text-xl '>I utilized React Js, React Redux,React MUI,Node js,Express Js and Mongo Db to develop the Chitfund.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="qualification">
+        <div className='container'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3">Qualification</h1>
+
+            <h3 className="text-l font-semibold pl-1 mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl">B.Tech Information Technology (2016 - 2020)</h3>
+            <ul className='mt-2  ml-10 text-l md:text-xl lg:text-2xl list-disc'>
+              <li className='mt-2 text-l md:text-xl lg:text-xl '>   Completed degree with CGPA : 7.9</li>
+              <li className='mt-2 text-l md:text-xl lg:text-xl'> Mookambigai college of engineering,kalamavur.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="stacks">
+        <div className='container'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3">Proficient Stacks</h1>
+            <CarouselSlide />
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div className='container'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3 mb-4">Skills</h1>
+            <Cards />
+          </div>
+        </div>
+      </section>
+      <section id='contact'>
+      <div className='container'>
+      <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3 mb-3">Contact</h1>
+
+        <form >
+        <div className='mt-3 ml-10 md:ml-0 grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mb-4'>
+          <div>
                 <TextField
                   variant="outlined"
                   label="Fullname"
@@ -247,10 +242,10 @@ arunkumar-m-4295aa15b">
                   {...(errors.fullname !== '' && { error: true, helperText: errors.fullname })}
                   required
                 />
-              </Grid>
+          </div>
 
-              <Grid item xs={12} sm={12} md={6} lg={3}>
-                <TextField
+          <div>
+          <TextField
                   variant="outlined"
                   label="Mail"
                   name="mail"
@@ -262,10 +257,10 @@ arunkumar-m-4295aa15b">
                   {...(errors.mail !== '' && { error: true, helperText: errors.mail })}
                   required
                 />
-              </Grid>
+          </div>
 
-              <Grid item xs={12} sm={12} md={6} lg={3}>
-                <TextField
+          <div>
+          <TextField
                   variant="outlined"
                   label="Mobile"
                   name="mobile"
@@ -275,10 +270,10 @@ arunkumar-m-4295aa15b">
                   {...(errors.mobile !== '' && { error: true, helperText: errors.mobile })}
                   required
                 />
-              </Grid>
+            </div>
 
-              <Grid item xs={12} sm={12} md={6} lg={3}>
-                <TextField
+             <div>
+             <TextField
                   variant="outlined"
                   label="Subject"
                   name="subject"
@@ -287,24 +282,36 @@ arunkumar-m-4295aa15b">
                   {...(errors.subject !== '' && { error: true, helperText: errors.subject })}
                   required
                 />
-              </Grid>
-              <Grid item xs={3}>
-                <Button variant='success' sx={{ backgroundColor: 'black', color: 'white' }} onClick={formSubmit}>Submit</Button>
-              </Grid>
+          </div>
 
-              {message ? (
-                <h6 style={{ paddingTop: "25px", paddingLeft: "170px", backgroundColor: "#bfbfbf", color: 'green' }}>{message}</h6>
+        
+
+          </div>
+
+          
+
+          <div className="flex justify-center items-center">
+          <Button variant='success' sx={{ backgroundColor: 'black', color: 'white',marginBottom:"30px",marginLeft:"15px" }} onClick={formSubmit}>Submit</Button>
+          {message ? (
+                <h6 className='text-center mb-20 mr-20'>{message}</h6>
               ) : ('')}
 
-            </Grid>
-          </form>
+          </div>
+          {/* {message ? (
+                <h6 className='text-center mb-20'>{message}</h6>
+              ) : ('')} */}
 
-        </Grid>
+            
+          </form>
+        
+        </div>
+        </div>
       </section>
 
 
 
-    </div>
+    </>
+
   );
 }
 
