@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Grid, Stack, TextField, Tooltip } from '@mui/material';
+import { Box, Button, Grid, Stack, TextField, Tooltip } from '@mui/material';
 import profilepicture from './images/profilepicture.jpg';
 import AppbarMui from './components/AppbarMui';
 import { useState } from 'react';
@@ -8,6 +8,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CarouselSlide from './components/CarouselSlide';
 import Cards from './components/Cards';
+import { AddBoxTwoTone } from '@mui/icons-material';
 // import Pagination from './components/Pagination';
 
 
@@ -224,87 +225,87 @@ function App() {
         </div>
       </section>
       <section id='contact'>
-      <div className='container'>
-      <div className='md:mx-5 lg:mx-20 xl:mx-40'>
-      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3 mb-3">Contact</h1>
+        <div className='container'>
+          <div className='md:mx-5 lg:mx-20 xl:mx-40'>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3 mb-3">Contact</h1>
 
-        <form >
-        <div className='mt-3 ml-10 md:ml-0 grid md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-5 mb-4'>
-          <div>
-                <TextField
-                  variant="outlined"
-                  label="Fullname"
-                  name="fullname"
-                  value={values.fullname}
-                  onBlur={userNameHandler}
-                  onFocus={userNameHider}
-                  onChange={handleInputChange}
-                  {...(errors.fullname !== '' && { error: true, helperText: errors.fullname })}
-                  required
-                />
+            <form >
+              <div className='mt-3 ml-10 md:ml-0 grid md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-5 mb-4'>
+                <div>
+                  <TextField
+                    variant="outlined"
+                    label="Fullname"
+                    name="fullname"
+                    value={values.fullname}
+                    onBlur={userNameHandler}
+                    onFocus={userNameHider}
+                    onChange={handleInputChange}
+                    {...(errors.fullname !== '' && { error: true, helperText: errors.fullname })}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <TextField
+                    variant="outlined"
+                    label="Mail"
+                    name="mail"
+                    type={"email"}
+                    value={values.mail}
+                    onBlur={emailHandler}
+                    onFocus={emailHider}
+                    onChange={handleInputChange}
+                    {...(errors.mail !== '' && { error: true, helperText: errors.mail })}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <TextField
+                    variant="outlined"
+                    label="Mobile"
+                    name="mobile"
+                    type="number"
+                    value={values.mobile}
+                    onChange={handleInputChange}
+                    {...(errors.mobile !== '' && { error: true, helperText: errors.mobile })}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <TextField
+                    variant="outlined"
+                    label="Subject"
+                    name="subject"
+                    value={values.subject}
+                    onChange={handleInputChange}
+                    {...(errors.subject !== '' && { error: true, helperText: errors.subject })}
+                    required
+                  />
+                </div>
+
+
+
+              </div>
+
+
+
+              <Box sx={{ textAlign: "center", marginTop: "15px" }}>
+                <Button variant='success' sx={{ backgroundColor: 'black', color: 'white' }} onClick={formSubmit}>Submit</Button>
+
+              </Box>
+
+              <Box sx={{ textAlign: "center", marginTop: "10px" }}>
+                {message ? (
+                  <h6 className='text-center mb-20'>{message}</h6>
+                ) : ('')}
+              </Box>
+
+
+            </form>
+
           </div>
-
-          <div>
-          <TextField
-                  variant="outlined"
-                  label="Mail"
-                  name="mail"
-                  type={"email"}
-                  value={values.mail}
-                  onBlur={emailHandler}
-                  onFocus={emailHider}
-                  onChange={handleInputChange}
-                  {...(errors.mail !== '' && { error: true, helperText: errors.mail })}
-                  required
-                />
-          </div>
-
-          <div>
-          <TextField
-                  variant="outlined"
-                  label="Mobile"
-                  name="mobile"
-                  type="number"
-                  value={values.mobile}
-                  onChange={handleInputChange}
-                  {...(errors.mobile !== '' && { error: true, helperText: errors.mobile })}
-                  required
-                />
-            </div>
-
-             <div>
-             <TextField
-                  variant="outlined"
-                  label="Subject"
-                  name="subject"
-                  value={values.subject}
-                  onChange={handleInputChange}
-                  {...(errors.subject !== '' && { error: true, helperText: errors.subject })}
-                  required
-                />
-          </div>
-
-        
-
-          </div>
-
-          
-
-          <div className="flex justify-center items-center">
-          <Button variant='success' sx={{ backgroundColor: 'black', color: 'white',marginBottom:"30px",marginLeft:"15px" }} onClick={formSubmit}>Submit</Button>
-          {message ? (
-                <h6 className='text-center mb-20 mr-20'>{message}</h6>
-              ) : ('')}
-
-          </div>
-          {/* {message ? (
-                <h6 className='text-center mb-20'>{message}</h6>
-              ) : ('')} */}
-
-            
-          </form>
-        
-        </div>
         </div>
       </section>
 
