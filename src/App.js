@@ -229,7 +229,7 @@ function App() {
       <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3 mb-3">Contact</h1>
 
         <form >
-        <div className='mt-3 ml-10 md:ml-0 grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mb-4'>
+        <div className='mt-3 ml-10 md:ml-0 grid md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-5 mb-4'>
           <div>
                 <TextField
                   variant="outlined"
