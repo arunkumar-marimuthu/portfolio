@@ -182,14 +182,14 @@ function AppbarMui(props) {
                         PORTFOLIO
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' },marginLeft:"50px" }}>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={home}>Home</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}}  onClick={about}>About</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={experience}>Experience</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={projects}>Projects</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}}  onClick={qualification}>Qualification</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={stacks}>Technical Stacks</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={skills}>Skills</Button>
-                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={contact}>Contacts</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}} onClick={home}>Home</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}}  onClick={about}>About</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}} onClick={experience}>Experience</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}} onClick={projects}>Projects</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}}  onClick={qualification}>Qualification</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}} onClick={stacks}>Technical Stacks</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}} onClick={skills}>Skills</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"#FFFF00"}}} onClick={contact}>Contacts</Button>
                     </Box>
                 </Toolbar>
             </AppBar>v
