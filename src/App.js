@@ -7,8 +7,8 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import MailIcon from '@mui/icons-material/Mail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CarouselSlide from './components/CarouselSlide';
-import Cards from './components/Cards';
 import { AddBoxTwoTone } from '@mui/icons-material';
+import Cards from './components/Cards';
 // import Pagination from './components/Pagination';
 
 
@@ -137,8 +137,8 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="order-first md:order-last md:w-1/2">
-              <img src={profilepicture} alt="Your Image" className="mx-auto  w-90 h-130" />
+            <div className="order-first md:order-last md:w-1/2 overflow-hidden">
+              <img src={profilepicture} alt="Your Image" className="mx-auto  w-90 h-130 transition-transform transform hover:scale-110" />
             </div>
           </div>
         </div>
@@ -157,9 +157,12 @@ function App() {
         <div className='container'>
           <div className='md:mx-5 lg:mx-20 xl:mx-40'>
             <h1 className="text-xl font-black sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3">Experience</h1>
+            <h3 className="text-l mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl font-semibold ">Software Developer |  Zaar Technologies (subsidiary of Techzarinfo Software solutions)</h3>
 
-            <h3 className="text-l mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl font-semibold ">MERN Stack Developer</h3>
-            <h5 className='mt-2 text-l md:text-xl lg:text-xl' >Experienced MERN developer with one year of hands-on expertise in building dynamic and responsive web applications. Proficient in frontend and backend development, with a strong focus on delivering high-quality, optimized code.Additionally, I have utilized Next.js to develop web pages with optimized code, achieving code reusability through reusable components. Demonstrated ability to work effectively in collaborative teams and contribute to the success of projects.</h5>
+            <h5 className='mt-2 text-l md:text-xl lg:text-xl' >Experienced Software developer with one  year of hands-on expertise in building dynamic and responsive web applications. Proficient in frontend with a strong focus on delivering high-quality, optimized code.Additionally, I have utilized Next.js to develop web pages with optimized code, achieving code reusability through reusable components. I have hands-on experienced in next js, react js , tailwind css, redux ,node js and mongo db.</h5>
+
+            <h3 className="text-l mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl font-semibold ">Associate Software Engineer |  Bytes and Binaries Software Solutions</h3>
+            <h5 className='mt-2 text-l md:text-xl lg:text-xl' >Experienced MERN developer with one plus years of hands-on expertise in building dynamic and responsive web applications. Proficient in frontend and backend development, with a strong focus on delivering high-quality, optimized code.Additionally, I have utilized Next.js to develop web pages with optimized code, achieving code reusability through reusable components. Demonstrated ability to work effectively in collaborative teams and contribute to the success of projects.</h5>
 
             <h3 className="text-l font-semibold mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl ">Service Advisor</h3>
 
@@ -173,6 +176,19 @@ function App() {
         <div className='container'>
           <div className='md:mx-5 lg:mx-20 xl:mx-40'>
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3">Projects</h1>
+
+            <h3 className="text-l font-semibold  mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl">Democracy X</h3>
+            <ul className='mt-2  ml-10 text-l md:text-xl lg:text-2xl list-disc'>
+              <li className='mt-2 text-l md:text-xl lg:text-xl'>I worked as a Web Developer on a web application designed to implement e-commerce with web3 transactions.</li>
+              <li className='mt-2 text-l md:text-xl lg:text-xl '>I utilized Next Js,Redux,Tailwind css,Node js,Express Js,web3 and Mongo Db to develop the Democracy X.</li>
+            </ul>
+
+            <h3 className="text-l font-semibold  mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl">Gadgets</h3>
+            <ul className='mt-2  ml-10 text-l md:text-xl lg:text-2xl list-disc'>
+              <li className='mt-2 text-l md:text-xl lg:text-xl'>I worked as a Web Developer on a web application designed to implement e-commerce site.</li>
+              <li className='mt-2 text-l md:text-xl lg:text-xl '>I utilized Next Js,Redux,Tailwind css,Node js,Express Js and Mongo Db to develop the Gadgets.</li>
+            </ul>
+
             <h3 className="text-l font-semibold mt-2 sm:text-xl md:text-xl lg:text-2xl lg:mt-3  xl:text-3xl">Job Planner</h3>
 
             <ul className='mt-2 ml-10 text-l md:text-xl lg:text-2xl list-disc'>
@@ -189,6 +205,8 @@ function App() {
               <li className='mt-2 text-l md:text-xl lg:text-xl'>I worked as a Web Developer on a web application designed to maintain records of chit schemes.</li>
               <li className='mt-2 text-l md:text-xl lg:text-xl '>I utilized React Js, React Redux,React MUI,Node js,Express Js and Mongo Db to develop the Chitfund.</li>
             </ul>
+
+            
           </div>
         </div>
       </section>

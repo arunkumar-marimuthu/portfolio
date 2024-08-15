@@ -104,11 +104,16 @@ function AppbarMui(props) {
             <Divider />
             <List>
 
-                <ListItem disablePadding>
-                    <ListItemButton sx={{ textAlign: 'center' }} onClick={home}>
-                        <ListItemText primary="Home" />
-                    </ListItemButton>
-                </ListItem>
+            <ListItem disablePadding>
+      <ListItemButton
+        sx={{
+          textAlign: 'center'
+        }}
+        onClick={home}
+      >
+        <ListItemText primary="Home" />
+      </ListItemButton>
+    </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton sx={{ textAlign: 'center' }} onClick={about}>
                         <ListItemText primary="About" />
@@ -177,17 +182,17 @@ function AppbarMui(props) {
                         PORTFOLIO
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' },marginLeft:"50px" }}>
-                        <Button sx={{ color: '#fff' }} onClick={home}>Home</Button>
-                        <Button sx={{ color: '#fff' }}  onClick={about}>About</Button>
-                        <Button sx={{ color: '#fff' }} onClick={experience}>Experience</Button>
-                        <Button sx={{ color: '#fff' }} onClick={projects}>Projects</Button>
-                        <Button sx={{ color: '#fff' }}  onClick={qualification}>Qualification</Button>
-                        <Button sx={{ color: '#fff' }} onClick={stacks}>Technical Stacks</Button>
-                        <Button sx={{ color: '#fff' }} onClick={skills}>Skills</Button>
-                        <Button sx={{ color: '#fff' }} onClick={contact}>Contacts</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={home}>Home</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}}  onClick={about}>About</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={experience}>Experience</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={projects}>Projects</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}}  onClick={qualification}>Qualification</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={stacks}>Technical Stacks</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={skills}>Skills</Button>
+                        <Button sx={{ color: '#fff' ,'&:hover':{color:"blue"}}} onClick={contact}>Contacts</Button>
                     </Box>
                 </Toolbar>
-            </AppBar>
+            </AppBar>v
             <nav>
                 <Drawer
                     container={container}
