@@ -119,7 +119,7 @@ function App() {
             <div className="order-last md:order-first md:w-1/2 md:pl-10">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-black mt-3">Hi, I'm Arunkumar</h1>
               <h3 className="text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-semibold ">MERN Stack Developer</h3>
-              <h5 className='mt-2 text-l md:text-xl lg:text-2xl' >I am a MERN stack developer with one year of experience in web development. I have worked on a range of projects for clients in the financial and home interior design industries. I am passionate about creating exceptional user experiences and have a strong understanding of usability and accessibility standards.</h5>
+              <h5 className='mt-2 text-l md:text-xl lg:text-2xl' >I am Arunkumar from Trichy, with over 4 years of professional experience. I have dedicated over 2 years to web development, specializing in the MERN stack. During this time, I have successfully developed and delivered more than 4 projects from scratch using React and Next.js for the frontend. Additionally, I have one year of hands-on experience in building robust APIs with Node.js and MongoDB.</h5>
               <div className='flex flex-start'>
                 <div>
                   <Stack direction="row" spacing={6} className='mt-3' >
